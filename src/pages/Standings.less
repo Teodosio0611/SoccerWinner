@@ -1,0 +1,63 @@
+.standings {
+  .standings-header {
+    margin-bottom: 24px;
+    
+    h2 {
+      color: #f1f5f9;
+      margin: 0;
+      
+      .anticon {
+        margin-right: 12px;
+      }
+    }
+  }
+  
+  .standings-card {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    
+    .standings-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+      gap: 16px;
+      
+      .standings-title {
+        margin: 0;
+        color: #f1f5f9;
+      }
+      
+      .league-select {
+        width: 200px;
+        background: #334155;
+        border-color: #475569;
+        color: #f1f5f9;
+        
+        .ant-select-selector {
+          background: #334155 !important;
+          border-color: #475569 !important;
+          color: #f1f5f9;
+        }
+        
+        .ant-select-arrow {
+          color: #94a3b8;
+        }
+      }
+    }
+  }
+  
+  // 移动端适配
+  @media (max-width: 768px) {
+    .standings-controls {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .league-select {
+      width: 100% !important;
+    }
+  }
+}
