@@ -1,0 +1,196 @@
+.match-detail {
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    color: #3b82f6;
+    margin-bottom: 24px;
+    font-size: 16px;
+    
+    &:hover {
+      color: #2563eb;
+    }
+    
+    .anticon {
+      margin-right: 8px;
+    }
+  }
+  
+  .match-header-card {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    
+    .match-info {
+      text-align: center;
+      
+      .league-name {
+        color: #94a3b8;
+        font-size: 16px;
+        display: block;
+        margin-bottom: 8px;
+      }
+      
+      .match-title {
+        color: #f1f5f9;
+        margin: 0 0 16px 0;
+      }
+      
+      .match-date {
+        display: block;
+        color: #94a3b8;
+        margin-bottom: 16px;
+        font-size: 16px;
+      }
+      
+      .match-status {
+        font-size: 18px;
+        font-weight: 500;
+        
+        &.live {
+          color: #10b981;
+        }
+        
+        &.finished {
+          color: #ef4444;
+        }
+        
+        &.upcoming {
+          color: #f59e0b;
+        }
+      }
+    }
+  }
+  
+  .match-scoreboard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 24px;
+    
+    .team {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 35%;
+      
+      .team-logo {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #334155;
+        margin-bottom: 16px;
+      }
+      
+      .team-name {
+        color: #f1f5f9;
+        font-size: 20px;
+        font-weight: 500;
+        text-align: center;
+      }
+    }
+    
+    .score {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 30%;
+      
+      .score-display {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 16px;
+        
+        .score-number {
+          font-size: 48px;
+          font-weight: 700;
+          color: #f1f5f9;
+          font-family: 'JetBrains Mono', monospace;
+        }
+        
+        .score-divider {
+          margin: 0 16px;
+          color: #94a3b8;
+          font-size: 48px;
+          font-weight: 700;
+        }
+      }
+      
+      .match-progress {
+        width: 100%;
+        max-width: 200px;
+      }
+    }
+  }
+  
+  .match-stats {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    
+    .stats-title {
+      color: #f1f5f9;
+      margin: 0 0 24px 0;
+    }
+    
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 24px;
+      
+      .ant-statistic {
+        .ant-statistic-title {
+          color: #94a3b8;
+          margin-bottom: 8px;
+        }
+        
+        .ant-statistic-content {
+          color: #f1f5f9;
+          font-size: 20px;
+          
+          .ant-statistic-content-value {
+            font-size: 20px;
+          }
+          
+          .ant-statistic-content-suffix {
+            color: #94a3b8;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+  
+  // 移动端适配
+  @media (max-width: 768px) {
+    .match-scoreboard {
+      flex-direction: column;
+      gap: 24px;
+      padding: 16px;
+      
+      .team, .score {
+        width: 100%;
+      }
+      
+      .score .score-display {
+        .score-number {
+          font-size: 36px;
+        }
+        
+        .score-divider {
+          font-size: 36px;
+        }
+      }
+    }
+    
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+  }
+}

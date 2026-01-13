@@ -1,0 +1,63 @@
+.standings-table {
+  .ant-table {
+    background: transparent;
+  }
+  
+  .ant-table-thead > tr > th {
+    background: #334155;
+    color: #f1f5f9;
+    font-weight: 600;
+    border-bottom: 1px solid #475569;
+    padding: 12px 8px;
+  }
+  
+  .ant-table-tbody > tr > td {
+    background: #1e293b;
+    border-bottom: 1px solid #334155;
+    color: #cbd5e1;
+    padding: 12px 8px;
+  }
+  
+  .ant-table-tbody > tr:hover > td {
+    background: #334155;
+  }
+  
+  .ant-table-content {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .rank {
+    font-weight: 700;
+    color: #f1f5f9;
+  }
+  
+  .team-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    
+    .team-logo-small {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid #475569;
+    }
+  }
+  
+  .points {
+    font-weight: 700;
+    color: #3b82f6;
+  }
+  
+  .positive {
+    color: #10b981;
+    font-weight: 500;
+  }
+  
+  .negative {
+    color: #ef4444;
+    font-weight: 500;
+  }
+}

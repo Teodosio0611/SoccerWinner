@@ -1,0 +1,39 @@
+@import '~antd/dist/reset.css';
+
+.layout {
+  min-height: 100vh;
+  background: #0f172a;
+}
+
+.content {
+  padding: 24px;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+}
+
+// 覆盖 antd 默认样式
+.ant-layout {
+  background: #0f172a;
+}
+
+.ant-layout-header {
+  background: #1e293b;
+  padding: 0 24px;
+  height: 64px;
+  line-height: 64px;
+}
+
+.ant-layout-footer {
+  background: #1e293b;
+  color: #94a3b8;
+  text-align: center;
+  padding: 16px 24px;
+}
+
+// 响应式优化
+@media (max-width: 768px) {
+  .content {
+    padding: 16px;
+  }
+}

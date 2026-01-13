@@ -1,0 +1,103 @@
+.match-card {
+  background: #1e293b;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  transition: all 0.3s;
+  
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    border-color: #475569;
+  }
+  
+  &.live {
+    border-color: #10b981;
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.2);
+  }
+  
+  .match-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    
+    .league-name {
+      font-size: 14px;
+      color: #94a3b8;
+      font-weight: 500;
+    }
+    
+    .ant-tag {
+      margin: 0;
+      border-radius: 4px;
+      font-weight: 500;
+    }
+  }
+  
+  .match-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    
+    .team {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 35%;
+      
+      .team-logo {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #334155;
+        margin-bottom: 8px;
+      }
+      
+      .team-name {
+        color: #f1f5f9;
+        font-weight: 500;
+        text-align: center;
+        font-size: 16px;
+      }
+    }
+    
+    .score {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30%;
+      
+      .score-number {
+        font-size: 24px;
+        font-weight: 700;
+        color: #f1f5f9;
+        font-family: 'JetBrains Mono', monospace;
+      }
+      
+      .score-divider {
+        margin: 0 8px;
+        color: #94a3b8;
+        font-size: 24px;
+        font-weight: 700;
+      }
+      
+      .vs {
+        font-size: 18px;
+        font-weight: 700;
+        color: #94a3b8;
+      }
+    }
+  }
+  
+  .match-progress {
+    margin-bottom: 12px;
+  }
+  
+  .match-time {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 14px;
+  }
+}

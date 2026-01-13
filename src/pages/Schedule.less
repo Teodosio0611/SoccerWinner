@@ -1,0 +1,149 @@
+.schedule {
+  .schedule-header {
+    margin-bottom: 24px;
+    
+    h2 {
+      color: #f1f5f9;
+      margin: 0;
+      
+      .anticon {
+        margin-right: 12px;
+      }
+    }
+  }
+  
+  .calendar-card {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    
+    .schedule-calendar {
+      background: transparent;
+      
+      .ant-picker-calendar-header {
+        padding: 16px 0;
+        
+        .ant-picker-calendar-year-select, 
+        .ant-picker-calendar-month-select {
+          background: #334155;
+          border-color: #475569;
+          color: #f1f5f9;
+        }
+      }
+      
+      .ant-picker-panel {
+        border: none;
+        
+        .ant-picker-calendar-date {
+          border-color: #334155;
+          
+          &:hover {
+            background: #334155;
+          }
+          
+          &.ant-picker-calendar-date-today {
+            background: rgba(59, 130, 246, 0.1);
+            border-color: #3b82f6;
+          }
+        }
+        
+        .ant-picker-calendar-date-value {
+          color: #f1f5f9;
+        }
+        
+        .ant-picker-calendar-date-content {
+          color: #94a3b8;
+        }
+      }
+    }
+  }
+  
+  .calendar-date-marker {
+    text-align: center;
+    
+    .date-number {
+      font-weight: 500;
+      color: #f1f5f9;
+    }
+    
+    .match-count {
+      font-size: 12px;
+      color: #3b82f6;
+      margin-top: 2px;
+    }
+  }
+  
+  .calendar-date-number {
+    text-align: center;
+    color: #94a3b8;
+  }
+  
+  .schedule-content {
+    .schedule-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+      gap: 16px;
+      
+      .selected-date {
+        margin: 0;
+        color: #f1f5f9;
+      }
+      
+      .league-filter-select {
+        width: 200px;
+        background: #334155;
+        border-color: #475569;
+        color: #f1f5f9;
+        
+        .ant-select-selector {
+          background: #334155 !important;
+          border-color: #475569 !important;
+          color: #f1f5f9;
+        }
+        
+        .ant-select-arrow {
+          color: #94a3b8;
+        }
+      }
+    }
+    
+    .matches-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    
+    .empty-card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      
+      .empty-state {
+        text-align: center;
+        padding: 40px 0;
+        color: #94a3b8;
+        
+        p {
+          margin: 0;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  
+  // 移动端适配
+  @media (max-width: 768px) {
+    .schedule-controls {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .league-filter-select {
+      width: 100% !important;
+    }
+  }
+}

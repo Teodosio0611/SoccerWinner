@@ -1,0 +1,68 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #1e293b !important;
+  padding: 0 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 64px;
+  }
+
+  .logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #f1f5f9;
+    
+    a {
+      color: #f1f5f9;
+      
+      &:hover {
+        color: #3b82f6;
+      }
+    }
+  }
+
+  .nav-menu {
+    background: transparent !important;
+    border-bottom: none !important;
+    
+    .ant-menu-item {
+      color: #94a3b8;
+      font-size: 16px;
+      
+      &:hover, &.ant-menu-item-selected {
+        color: #f1f5f9 !important;
+        border-bottom: 2px solid #3b82f6 !important;
+      }
+    }
+  }
+
+  .mobile-menu-icon {
+    display: none;
+    font-size: 20px;
+    color: #f1f5f9;
+  }
+
+  // 移动端适配
+  @media (max-width: 768px) {
+    .nav-menu {
+      display: none;
+    }
+    
+    .mobile-menu-icon {
+      display: block;
+    }
+    
+    .header-content {
+      padding: 0 16px;
+    }
+  }
+}
